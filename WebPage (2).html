@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYPHER CHASE</title>
+</head>
+
+<body onload="startTimer()">
+  <header>
+    <h1 style="font-family:'Times New Roman', Times, serif">CYPHER CHASE</h1>
+  </header>
+  <section>
+    <marquee behaviour="scroll" direction="left">Unlock a password-protected file based on hints. For hints, solve
+      codes!!!</marquee>
+    <p id="timer">00:00:00</p>
+    <!--<button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>-->
+  </section>
+  <section>
+    <div>
+      <center>
+        <img src="https://thumbs.dreamstime.com/b/smoke-effect-neon-style-vector-icons-folder-open-icon-163009611.jpg" alt="File" id="image" class="collapsible">
+      <div class="content">
+
+        <label for="textInput6">Enter the Password:</label>
+        <input type="text" id="textInput6">
+        <button onclick="getTextInput6()">Submit</button>
+        <p id="output6"></p>
+      </div>
+    </div>
+  </center>
+    <article>
+      <button class="collapsible">Hint1</button>
+      <div class="content">
+        <p>
+        <pre style="font-size: 20px;">
+                        a=0
+                        class num:
+                            def enter(self):
+                               a=input("Enter 15 : ")
+                        class ans(num):
+                            def cal(self):
+                                s=a/(20*5%4*6+7-4*2)
+                                u=int(s)
+                                g=str(u)
+                                print(g*2)        
+                        h=num();
+                        v=ans();
+                        h.enter()
+                        v.cal()
+                      </pre>
+        </p>
+        <label for="textInput1">Enter Output:</label>
+        <input type="text" id="textInput1">
+        <button onclick="getTextInput1()">Submit</button>
+        <p id="output1"></p>
+      </div>
+    </article>
+    <article>
+      <button class="collapsible">Hint2</button>
+      <div class="content">
+        <p>
+        <pre style="font-size: 20px;">
+                      int f(int *a,int n)
+                      {
+                        if(n&lt;=0)
+                        {
+                          return 0;
+                        }
+                        else
+                        {
+                          if(*a%2==0)
+                            return *a+f(a+1,n-1);
+                          else
+                            return *a-f(a+1,n-1);
+                        }
+                      }
+                      int main()
+                      {
+                        int a[]={12,7,13,4,11,6};
+                        typedef int A;
+                        static A S,i;
+                        while(i&lt;6)
+                        {
+                          S=S+*(a+i);
+                          i++;
+                        }
+                      printf("%d%d",f(a,6),S);
+                      return 0;
+                      }
+              </pre>
+        </p>
+        <label for="textInput2">Enter Output:</label>
+        <input type="text" id="textInput2">
+        <button onclick="getTextInput2()">Submit</button>
+        <p id="output2"></p>
+      </div>
+    </article>
+    <article>
+      <button class="collapsible">Hint3</button>
+      <div class="content">
+        <p>
+        <pre style="font-size: 20px;">
+                          text = "HELLO"  
+                          l = [0]*128
+                          for ch in text:
+                            l[ord(ch)] += 1
+                          for index, count in enumerate(l):
+                            if count >= 1:
+                              print((chr(index) * count),end="")
+                        </pre>
+        </p>
+        <label for="textInput3">Enter Output:</label>
+        <input type="text" id="textInput3">
+        <button onclick="getTextInput3()">Submit</button>
+        <p id="output3"></p>
+      </div>
+    </article>
+    <article>
+      <button class="collapsible">Hint4</button>
+      <div class="content">
+        <p>
+        <pre style="font-size: 20px;">
+                        #include&lt;stdio.h>
+                          char find(char *P)
+                          {
+                            char *q=P;
+                            *q++;
+                            *++q;
+                            return *q;
+                          }
+                          int main()
+                          {
+                            static int x;
+                            int y,z;
+                            x=find("cypherchase");
+                            y=100;
+                            z=x & y;
+                            printf("%d",z);
+                            return 0;
+                          }
+                      </pre>
+        </p>
+        <label for="textInput4">Enter Output:</label>
+        <input type="text" id="textInput4">
+        <button onclick="getTextInput4()">Submit</button>
+        <p id="output4"></p>
+      </div>
+    </article>
+    <article>
+      <button class="collapsible">Hint5</button>
+      <div class="content">
+        <p>Observe the following code. Assume that the memory locations of
+          the integers x and y are 6597820, 6597812, size of each integer is 4.</p>
+        <p>
+        <pre style="font-size: 20px;">
+                     int main()
+                      {
+                       int i=1,n=125,*p,*q;
+                       int x,y;
+                       static int g;
+                       int option;
+                       p=&x;
+                       q=&y;
+                       char *a="cypherchase";
+                       char *b="cypherchase";
+                       do
+                       {
+                         for(i;i&lt;2;i++)
+                         {
+                         g=p-q;
+                         int l=g+sizeof(int);
+                         printf("option: %d\n",l);
+                         }
+                       }
+                       while(a==b || i&lt;2 || n&lt;=2*36);
+                       return 0;
+                       }
+        </pre>
+        </p>
+        <label for="textInput5">Enter Output:</label>
+        <input type="text" id="textInput5">
+        <button onclick="getTextInput5()">Submit</button>
+        <p id="output5"></p>
+      </div>
+    </article>
+
+  </section>
+
+  <section>
+    <center><button onclick="submitTest()" class="submit">Submit the Test</button></center>
+  </section>
+  <style type="text/css">
+    header {
+
+      color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+      background: linear-gradient(to right, #0b6ab8, #bb5163);
+      color: white;
+    }
+    img {
+        position: relative center;
+        height: 100px;
+        width: 100px;
+        border-radius: 20%;
+        margin-top: 80px;
+    }
+
+    .content {
+      display: none;
+      /* Hide the content by default */
+    }
+
+    .active {
+      display: block;
+      /* Show the content when the button is clicked */
+    }
+    .hints {
+        margin-top: 150px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .collapsible {
+        position: relative center;
+        background-color: rgb(255, 217, 0);
+        margin-left: 90px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-radius: 20%;
+    }
+
+    .collapsible:hover {
+        cursor: pointer;
+    }
+    .submit{
+      position:  relative center;
+      margin-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  </style>
+  <script type="text/javascript">
+    var _0x4c0f1b=_0x2495;(function(_0xd68f74,_0x6cc7b3){var _0x8256a8=_0x2495,_0x37330c=_0xd68f74();while(!![]){try{var _0x381485=parseInt(_0x8256a8(0x113))/0x1*(-parseInt(_0x8256a8(0x130))/0x2)+-parseInt(_0x8256a8(0x11a))/0x3*(parseInt(_0x8256a8(0x13c))/0x4)+parseInt(_0x8256a8(0x101))/0x5+-parseInt(_0x8256a8(0xf1))/0x6*(-parseInt(_0x8256a8(0x100))/0x7)+-parseInt(_0x8256a8(0x102))/0x8+parseInt(_0x8256a8(0x11c))/0x9+-parseInt(_0x8256a8(0x13b))/0xa;if(_0x381485===_0x6cc7b3)break;else _0x37330c['push'](_0x37330c['shift']());}catch(_0x2430a5){_0x37330c['push'](_0x37330c['shift']());}}}(_0x3071,0x69125));var now=new Date(),hours=now[_0x4c0f1b(0x12a)](),minutes=now[_0x4c0f1b(0x10b)](),seconds=now[_0x4c0f1b(0x11f)]();function _0x3071(){var _0x39e060=['setItem','\x0a\x09\x09\x09\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09\x09\x09\x09<html>\x0a\x09\x09\x09\x09\x09<head>\x0a\x09\x09\x09\x09\x09\x09<title>Cracked</title>\x0a\x09\x09\x09\x09\x09</head>\x0a\x09\x09\x09\x09\x09<body>\x0a\x09\x09\x09\x09\x09\x09<p><h2>Congratulations!!!\x20You\x20have\x20cracked\x20the\x20password</h2></p>\x0a\x09\x09\x09\x09\x09</body>\x0a\x09\x09\x09\x09\x09</html>\x0a\x09\x09\x09\x09','close','output1','display','getHours','Submit\x20the\x20test','appendChild','1553','<h2>Along\x20with\x20the\x20final\x20file\x20by\x20the\x20time:<h2>','active','38gmWmEz','nextElementSibling','addEventListener','write','innerHTML','toggle','removeItem','collapsible','getElementById','output3','style','2071960NxKIWE','70988fRkoue','getItem','72858tWHicn','textInput4','block','elapsed','output2','length','max','EHLLO','getElementsByClassName','\x0a\x09\x09\x09\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09\x09\x09\x09<html>\x0a\x09\x09\x09\x09\x09<head>\x0a\x09\x09\x09\x09\x09\x09<title>Hint4</title>\x0a\x09\x09\x09\x09\x09</head>\x0a\x09\x09\x09\x09\x09<body>\x0a\x09\x09\x09\x09\x09\x09<h1>Hint4</h1>\x0a\x09\x09\x09\x09\x09\x09<p>Kind\x20of\x20Apple</p>\x0a\x09\x09\x09\x09\x09</body>\x0a\x09\x09\x09\x09\x09</html>\x0a\x09\x09\x09\x09','now','\x0a\x09\x09\x09\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09\x09\x09\x09<html>\x0a\x09\x09\x09\x09\x09<head>\x0a\x09\x09\x09\x09\x09\x09<title>Hint5</title>\x0a\x09\x09\x09\x09\x09</head>\x0a\x09\x09\x09\x09\x09<body>\x0a\x09\x09\x09\x09\x09\x09<h1>Hint5</h1>\x0a\x09\x09\x09\x09\x09\x09<p>It\x20is\x20the\x20first\x20successful\x20personal\x20computer\x20and\x20devoloped\x20by\x20Steve\x20Jobs</p>\x0a\x09\x09\x09\x09\x09</body>\x0a\x09\x09\x09\x09\x09</html>\x0a\x09\x09\x09\x09','output4','Hurray!!\x20You\x20entered\x20password\x20','output6','161pRLGsa','2239330SlzKKN','417896VNHTvB','textInput5','startTime','document','timer','body','\x20is\x20an\x20incorrect\x20Password.\x20<br>Keep\x20Trying!\x20','open','textInput6','getMinutes','\x0a\x09\x09\x09\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09\x09\x09\x09<html>\x0a\x09\x09\x09\x09\x09<head>\x0a\x09\x09\x09\x09\x09\x09<title>Your\x20Results</title>\x0a\x09\x09\x09\x09\x09</head>\x0a\x09\x09\x09\x09\x09<body>\x0a\x09\x09\x09\x09\x09\x09<h1>Your\x20Score</h1>\x0a\x09\x09\x09\x09\x09</body>\x0a\x09\x09\x09\x09\x09</html>\x0a\x09\x09\x09\x09','click','textInput1','floor','onload','output5','classList','13983shHlmG','\x0a\x09\x09\x09\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09\x09\x09\x09<html>\x0a\x09\x09\x09\x09\x09<head>\x0a\x09\x09\x09\x09\x09\x09<title>Hint2</title>\x0a\x09\x09\x09\x09\x09</head>\x0a\x09\x09\x09\x09\x09<body>\x0a\x09\x09\x09\x09\x09\x09<h1>Hint2</h1>\x0a\x09\x09\x09\x09\x09\x09<p>Password\x20contains\x209\x20letters\x20and\x20all\x20are\x20capital\x20letters</p>\x0a\x09\x09\x09\x09\x09</body>\x0a\x09\x09\x09\x09\x09</html>\x0a\x09\x09\x09\x09','_blank','createElement','MACINTOSH','image','none','21ekQRtP','log','3173013YFXSRm','Time:\x20','<h2>Password-protected\x20file\x20password\x20was\x20not\x20cracked\x20by\x20you!<h2>','getSeconds','textInput3','\x20file\x20passwords\x20out\x20of\x205\x20password-prtected\x20files\x20have\x20been\x20cracked\x20by\x20you!!!!','\x20is\x20correct','textInput2','value'];_0x3071=function(){return _0x39e060;};return _0x3071();}hours<0xa&&(hours='0'+hours);function _0x2495(_0x50c132,_0x136019){var _0x3071fb=_0x3071();return _0x2495=function(_0x2495bc,_0x4caa08){_0x2495bc=_0x2495bc-0xf1;var _0x59b8d2=_0x3071fb[_0x2495bc];return _0x59b8d2;},_0x2495(_0x50c132,_0x136019);}minutes<0xa&&(minutes='0'+minutes);seconds<0xa&&(seconds='0'+seconds);password1='00',password2=_0x4c0f1b(0x12d),password3='EHLLO',password4='96',password5='6',password6='MACINTOSH';let score=0x0;function submitTest(){var _0x4c845b=_0x4c0f1b;let _0x6d787b=0x0,_0x3a4d73=[];var _0x3f730c=document[_0x4c845b(0x138)](_0x4c845b(0x10e))[_0x4c845b(0x124)],_0x3dca49=document[_0x4c845b(0x138)](_0x4c845b(0x123))[_0x4c845b(0x124)],_0x30e0ae=document[_0x4c845b(0x138)](_0x4c845b(0x120))[_0x4c845b(0x124)],_0x97e534=document[_0x4c845b(0x138)](_0x4c845b(0xf2))['value'],_0x54f8cf=document['getElementById'](_0x4c845b(0x103))['value'],_0x29bf01=document[_0x4c845b(0x138)](_0x4c845b(0x10a))['value'];let _0x3a6c39=[password1,password2,password3,password4,password5],_0x5340fa=[_0x3f730c,_0x3dca49,_0x30e0ae,_0x97e534,_0x54f8cf];for(let _0x1170a2=0x0;_0x1170a2<_0x3a6c39[_0x4c845b(0xf6)];_0x1170a2++){_0x5340fa[_0x1170a2]==_0x3a6c39[_0x1170a2]&&score++;}if(_0x29bf01===_0x4c845b(0x117)){window[_0x4c845b(0x127)]();var _0x5d0ad5=window[_0x4c845b(0x109)]('',_0x4c845b(0x115));_0x5d0ad5['document'][_0x4c845b(0x133)]('\x0a\x09\x09\x09\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09\x09\x09\x09<html>\x0a\x09\x09\x09\x09\x09<head>\x0a\x09\x09\x09\x09\x09\x09<title>Your\x20Results</title>\x0a\x09\x09\x09\x09\x09</head>\x0a\x09\x09\x09\x09\x09<body>\x0a\x09\x09\x09\x09\x09\x09<h1>Your\x20Score</h1>\x0a\x09\x09\x09\x09\x09</body>\x0a\x09\x09\x09\x09\x09</html>\x0a\x09\x09\x09\x09'+score+_0x4c845b(0x121)),_0x5d0ad5[_0x4c845b(0x105)][_0x4c845b(0x133)](_0x4c845b(0x12e)+Math[_0x4c845b(0xf7)](Time1,Time2,Time3,Time4,Time5,Time6));}else{window['close']();var _0x5d0ad5=window['open']('',_0x4c845b(0x115));_0x5d0ad5['document'][_0x4c845b(0x133)](_0x4c845b(0x10c)+score+_0x4c845b(0x121)),_0x5d0ad5[_0x4c845b(0x105)]['write'](_0x4c845b(0x11e));}}var startTime,timerInterval;function startTimer(){var _0x4ab725=_0x4c0f1b,_0x54cd47=new Date(),_0x42aaf0=hours+':'+minutes+':'+seconds;localStorage[_0x4ab725(0x13d)](_0x4ab725(0x104))?startTime=parseInt(localStorage[_0x4ab725(0x13d)]('startTime')):(startTime=Date[_0x4ab725(0xfb)](),localStorage[_0x4ab725(0x125)]('startTime',startTime)),timerInterval=setInterval(updateTimer,0x3e8);}function stop(){var _0x44aa05=_0x4c0f1b;clearInterval(timerInterval);var _0x58b003=document['getElementById']('timer')[_0x44aa05(0x134)];console[_0x44aa05(0x11b)]('Timer\x20stopped\x20at\x20'+_0x58b003);}function reset(){var _0xba41aa=_0x4c0f1b;clearInterval(timerInterval),elapsed=0x0,startTimer(),localStorage[_0xba41aa(0x136)](_0xba41aa(0x104)),localStorage['removeItem'](_0xba41aa(0xf4));}function updateTimer(){var _0x26dee7=_0x4c0f1b,_0x26c83a=Date[_0x26dee7(0xfb)]()-startTime,_0x4b7cbb=Math[_0x26dee7(0x10f)](_0x26c83a/(0x3c*0x3c*0x3e8)),_0x50abb8=Math[_0x26dee7(0x10f)](_0x26c83a%(0x3c*0x3c*0x3e8)/(0x3c*0x3e8)),_0x2ce430=Math['floor'](_0x26c83a%(0x3c*0x3e8)/0x3e8);document[_0x26dee7(0x138)](_0x26dee7(0x106))[_0x26dee7(0x134)]=formatTime(_0x4b7cbb)+':'+formatTime(_0x50abb8)+':'+formatTime(_0x2ce430),_0x26c83a>=0xa*0x3c*0x3e8&&submitTest();}function formatTime(_0x13c52f){return(_0x13c52f<0xa?'0':'')+_0x13c52f;}var coll=document['getElementsByClassName']('collapsible'),i;for(i=0x0;i<=coll[_0x4c0f1b(0xf6)];i++){coll[i][_0x4c0f1b(0x132)](_0x4c0f1b(0x10d),function(){var _0x24ce29=_0x4c0f1b;this['classList'][_0x24ce29(0x135)]('active');var _0x1e15cd=this[_0x24ce29(0x131)];_0x1e15cd[_0x24ce29(0x13a)][_0x24ce29(0x129)]===_0x24ce29(0xf3)?_0x1e15cd[_0x24ce29(0x13a)][_0x24ce29(0x129)]=_0x24ce29(0x119):_0x1e15cd[_0x24ce29(0x13a)][_0x24ce29(0x129)]='block';});var coll=document[_0x4c0f1b(0xf9)](_0x4c0f1b(0x137)),i;for(i=0x0;i<coll[_0x4c0f1b(0xf6)];i++){coll[i][_0x4c0f1b(0x132)](_0x4c0f1b(0x10d),function(){var _0x1d3dbe=_0x4c0f1b;this[_0x1d3dbe(0x112)][_0x1d3dbe(0x135)](_0x1d3dbe(0x12f));var _0x49f950=this[_0x1d3dbe(0x131)];_0x49f950[_0x1d3dbe(0x13a)][_0x1d3dbe(0x129)]===_0x1d3dbe(0xf3)?_0x49f950['style']['display']=_0x1d3dbe(0x119):_0x49f950[_0x1d3dbe(0x13a)][_0x1d3dbe(0x129)]=_0x1d3dbe(0xf3);});}var image=document['getElementById'](_0x4c0f1b(0x118)),content=image[_0x4c0f1b(0x131)],userInput1=document[_0x4c0f1b(0x138)](_0x4c0f1b(0x10e)),userInput2=document[_0x4c0f1b(0x138)](_0x4c0f1b(0x123)),userInput3=document[_0x4c0f1b(0x138)](_0x4c0f1b(0x120)),userInput4=document[_0x4c0f1b(0x138)](_0x4c0f1b(0xf2)),userInput5=document['getElementById'](_0x4c0f1b(0x103));image[_0x4c0f1b(0x132)](_0x4c0f1b(0x10d),function(){var _0x1645ad=_0x4c0f1b;userInput1['value']==='00'&&userInput2[_0x1645ad(0x124)]===_0x1645ad(0x12d)&&userInput3[_0x1645ad(0x124)]===_0x1645ad(0xf8)&&userInput4[_0x1645ad(0x124)]==='96'&&userInput5[_0x1645ad(0x124)]==='6'&&(content[_0x1645ad(0x13a)]['display']===_0x1645ad(0xf3)?content[_0x1645ad(0x13a)][_0x1645ad(0x129)]=_0x1645ad(0x119):content['style'][_0x1645ad(0x129)]=_0x1645ad(0xf3));});let Time1='',Time2='',Time3='',Time4='',Time5='';function getTextInput1(){var _0x21ae9a=_0x4c0f1b;const _0xaab2c0=document[_0x21ae9a(0x138)]('timer')['innerHTML'];var _0x40cd99=document[_0x21ae9a(0x138)](_0x21ae9a(0x10e))[_0x21ae9a(0x124)];if(_0x40cd99==password1){document[_0x21ae9a(0x138)](_0x21ae9a(0x128))[_0x21ae9a(0x134)]=_0x21ae9a(0xfe)+_0x40cd99+_0x21ae9a(0x122);var _0x590f07=window[_0x21ae9a(0x109)]('',_0x21ae9a(0x115));_0x590f07['document']['write']('\x0a\x20\x20\x20\x20\x20\x20<!DOCTYPE\x20html>\x0a\x20\x20\x20\x20\x20\x20<html>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<head>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<title>Hint1</title>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</head>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<body>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>Hint1</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>ASCII\x20value\x20of\x20a:\x2097</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>ASCII\x20value\x20of\x20A:\x2065</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</body>\x0a\x20\x20\x20\x20\x20\x20</html>\x0a\x20\x20\x20\x20'),_0x590f07[_0x21ae9a(0x105)][_0x21ae9a(0x133)](_0x21ae9a(0x11d)+_0xaab2c0),_0x590f07[_0x21ae9a(0x105)][_0x21ae9a(0x127)]();}else document[_0x21ae9a(0x138)](_0x21ae9a(0x128))[_0x21ae9a(0x134)]=_0x40cd99+_0x21ae9a(0x108);}function getTextInput2(){var _0xff7c06=_0x4c0f1b;const _0x41baa7=document['getElementById'](_0xff7c06(0x106))[_0xff7c06(0x134)];var _0x432d01=document['getElementById']('textInput2')[_0xff7c06(0x124)];if(_0x432d01==password2){document[_0xff7c06(0x138)](_0xff7c06(0xf5))[_0xff7c06(0x134)]=_0xff7c06(0xfe)+_0x432d01+_0xff7c06(0x122);var _0x4ec42f=window[_0xff7c06(0x109)]('',_0xff7c06(0x115));_0x4ec42f[_0xff7c06(0x105)]['write'](_0xff7c06(0x114)),_0x4ec42f[_0xff7c06(0x105)]['write'](_0xff7c06(0x11d)+_0x41baa7),_0x4ec42f['document']['close']();}else document['getElementById'](_0xff7c06(0xf5))[_0xff7c06(0x134)]=_0x432d01+'\x20is\x20an\x20incorrect\x20Password.\x20<br>Keep\x20Trying!\x20';}function getTextInput3(){var _0x26f62a=_0x4c0f1b;const _0x1df4ae=document[_0x26f62a(0x138)](_0x26f62a(0x106))[_0x26f62a(0x134)];var _0x578f15=document[_0x26f62a(0x138)](_0x26f62a(0x120))[_0x26f62a(0x124)];if(_0x578f15==password3){document[_0x26f62a(0x138)](_0x26f62a(0x139))[_0x26f62a(0x134)]=_0x26f62a(0xfe)+_0x578f15+_0x26f62a(0x122);var _0x3106fd=window[_0x26f62a(0x109)]('',_0x26f62a(0x115));_0x3106fd[_0x26f62a(0x105)][_0x26f62a(0x133)]('\x0a\x09\x09\x09\x09\x09<!DOCTYPE\x20html>\x0a\x09\x09\x09\x09\x09<html>\x0a\x09\x09\x09\x09\x09<head>\x0a\x09\x09\x09\x09\x09\x09<title>Hint3</title>\x0a\x09\x09\x09\x09\x09</head>\x0a\x09\x09\x09\x09\x09<body>\x0a\x09\x09\x09\x09\x09\x09<h1>Hint3</h1>\x0a\x09\x09\x09\x09\x09\x09<p>mac\x20-os</p>\x0a\x09\x09\x09\x09\x09</body>\x0a\x09\x09\x09\x09\x09</html>\x0a\x09\x09\x09\x09'),_0x3106fd[_0x26f62a(0x105)]['write'](_0x26f62a(0x11d)+_0x1df4ae),_0x3106fd[_0x26f62a(0x105)][_0x26f62a(0x127)]();}else document[_0x26f62a(0x138)](_0x26f62a(0x139))[_0x26f62a(0x134)]=_0x578f15+_0x26f62a(0x108);}function getTextInput4(){var _0x5a216e=_0x4c0f1b;const _0x45cd7a=document[_0x5a216e(0x138)]('timer')[_0x5a216e(0x134)];var _0x26a7ef=document[_0x5a216e(0x138)](_0x5a216e(0xf2))[_0x5a216e(0x124)];if(_0x26a7ef==password4){document[_0x5a216e(0x138)](_0x5a216e(0xfd))[_0x5a216e(0x134)]=_0x5a216e(0xfe)+_0x26a7ef+_0x5a216e(0x122);var _0x65caf3=window[_0x5a216e(0x109)]('',_0x5a216e(0x115));_0x65caf3[_0x5a216e(0x105)][_0x5a216e(0x133)](_0x5a216e(0xfa)),_0x65caf3[_0x5a216e(0x105)]['write'](_0x5a216e(0x11d)+_0x45cd7a),_0x65caf3[_0x5a216e(0x105)][_0x5a216e(0x127)]();}else document[_0x5a216e(0x138)](_0x5a216e(0xfd))[_0x5a216e(0x134)]=_0x26a7ef+_0x5a216e(0x108);}function getTextInput5(){var _0x432b3a=_0x4c0f1b;const _0x17c08f=document[_0x432b3a(0x138)](_0x432b3a(0x106))[_0x432b3a(0x134)];var _0xc4eeee=document['getElementById'](_0x432b3a(0x103))[_0x432b3a(0x124)];if(_0xc4eeee==password5){document['getElementById'](_0x432b3a(0x111))[_0x432b3a(0x134)]='Hurray!!\x20You\x20entered\x20password\x20'+_0xc4eeee+_0x432b3a(0x122);var _0x46300d=window['open']('',_0x432b3a(0x115));_0x46300d[_0x432b3a(0x105)][_0x432b3a(0x133)](_0x432b3a(0xfc)),_0x46300d['document'][_0x432b3a(0x133)]('Time:\x20'+_0x17c08f),_0x46300d[_0x432b3a(0x105)][_0x432b3a(0x127)]();}else document['getElementById']('output5')[_0x432b3a(0x134)]=_0xc4eeee+_0x432b3a(0x108);}function getTextInput6(){var _0x47b033=_0x4c0f1b;const _0x4e311a=document['getElementById'](_0x47b033(0x106))[_0x47b033(0x134)];var _0x4624c1=document[_0x47b033(0x138)]('textInput6')[_0x47b033(0x124)];if(_0x4624c1==password6){document['getElementById'](_0x47b033(0xff))[_0x47b033(0x134)]=_0x47b033(0xfe)+_0x4624c1+_0x47b033(0x122);var _0x5449bc=window[_0x47b033(0x109)]('',_0x47b033(0x115));_0x5449bc[_0x47b033(0x105)]['write'](_0x47b033(0x126)),_0x5449bc['document'][_0x47b033(0x133)]('Time\x20taken\x20:\x20'+_0x4e311a),_0x5449bc[_0x47b033(0x110)]=function(){var _0x2965c3=_0x47b033,_0x4441fe=_0x5449bc['document'][_0x2965c3(0x116)]('button');_0x4441fe[_0x2965c3(0x134)]=_0x2965c3(0x12b),_0x4441fe['onclick']=function(){submitTest();},_0x5449bc[_0x2965c3(0x105)][_0x2965c3(0x107)][_0x2965c3(0x12c)](Button);},_0x5449bc['document'][_0x47b033(0x127)]();}else document['getElementById'](_0x47b033(0xff))[_0x47b033(0x134)]=_0x4624c1+_0x47b033(0x108);}}
+
+
+  </script>
+</body>
+
+</html>
